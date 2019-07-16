@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar color = 'primary'>
+    <ion-title>TA</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen class="ion-padding">
+    <ion-list>
+        <ion-item>
+            <ion-label position = "floating">Client Location</ion-label>
+           <ion-input type = "text" [(ngModel)]='location'></ion-input>
+          </ion-item>
+        <ion-item>
+            <ion-label position = "floating">Name of the project</ion-label>
+           <ion-input type = "text" [(ngModel)]='projectname'></ion-input>
+          </ion-item>
+         <ion-item>
+            <ion-label position = "floating">MM DD YY</ion-label>
+            <ion-datetime displayFormat="MM DD YY" placeholder="Select Date" [(ngModel)]='date'></ion-datetime>
+          </ion-item>
+          <ion-item>
+              <ion-label position = "floating">Amount</ion-label>
+             <ion-input type = "text" [(ngModel)]='amount'></ion-input>
+            </ion-item>
+            <img [src]="currentimage" *ngIf="currentimage">
+              <div margin= 100px>
+                <ion-button color="dark" shape="round" expand="full"(click)="send()"> Submit </ion-button>
+              </div>
+              <ion-fab vertical="bottom"  >
+                  <ion-fab-button (click)="takePicture()">
+                    <ion-icon name="camera"></ion-icon>
+                  </ion-fab-button>
+                </ion-fab>
+            </ion-list>
+</ion-content>

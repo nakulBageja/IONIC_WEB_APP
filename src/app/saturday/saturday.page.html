@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar color='primary'>
+    <ion-title>Saturday</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen class="ion-padding" >
+<ion-list>
+    <ion-item>
+        <ion-label position = "floating">Name of the project</ion-label>
+       <ion-input type = "text" [(ngModel)]='projectname'></ion-input>
+      </ion-item>
+     <ion-item>
+      <ion-label position = "floating">Task</ion-label>
+       <ion-input type = "text" [(ngModel)]='task'></ion-input>
+     </ion-item>
+     <ion-item>
+        <ion-label position = "floating">MM DD YY</ion-label>
+        <ion-datetime displayFormat="MM DD YY" placeholder="Select Date" [(ngModel)]='date'></ion-datetime>
+      </ion-item>
+      <ion-button color="dark" shape="round" expand="full"(click)="send()"> Submit </ion-button>
+</ion-list>
+</ion-content>

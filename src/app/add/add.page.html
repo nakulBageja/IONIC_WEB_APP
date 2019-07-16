@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar color = 'primary'>
+    <ion-button slot = 'end' (click)="logout()">
+      <ion-icon name="log-out"></ion-icon>
+    </ion-button>
+    <ion-title>Fill the form</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content fullscreen class="ion-padding">
+   <ion-list>
+    <ion-item>
+          <ion-label>Type</ion-label>
+          <ion-select placeholder = 'select one' [(ngModel)]='selecteditem' (ionChange)='onitemselection(selecteditem)'>
+            <ion-select-option value='saturday'>Saturday</ion-select-option>
+            <ion-select-option value='TA'>TA/DA</ion-select-option>
+            <ion-select-option value='other'>Other</ion-select-option>
+          </ion-select>
+        </ion-item>
+         <ion-item>
+        <ion-label position = "floating">Name of the project</ion-label>
+       <ion-input type = "text"></ion-input>
+      </ion-item>
+      
+     <ion-item>
+      <ion-label position = "floating">Task</ion-label>
+       <ion-input type = "text" ></ion-input>
+     </ion-item>
+     <ion-button  color="dark" shape="round" >Date</ion-button>
+   </ion-list>
+</ion-content>
+

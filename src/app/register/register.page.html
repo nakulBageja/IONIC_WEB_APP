@@ -1,0 +1,44 @@
+<ion-header>
+    <ion-toolbar color = 'secondary'>
+      <ion-title>register</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content fullscreen class="ion-padding">     
+      <ion-item>
+        <ion-label position ="floating">First Name</ion-label>
+        <ion-input type = "text" [(ngModel)]="firstname" name='firstname'></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position ="floating">Last Name</ion-label>
+        <ion-input type = "text" ></ion-input>
+      </ion-item>
+     <ion-item>
+        <ion-label position = "floating">Email</ion-label>
+       <ion-input type = "text" [(ngModel)]="email" name='email'></ion-input>
+      </ion-item>
+  
+      <ion-item>
+         <ion-label position = "floating">Password</ion-label>
+        <ion-input type = "password" [(ngModel)]="password" name='password'></ion-input>
+       </ion-item>
+       <ion-item>
+        <ion-label position = "floating">Confirm Password</ion-label>
+       <ion-input type = "password" [(ngModel)]="cpassword" name='cpassword'></ion-input>
+      </ion-item>
+      <div  >
+        <ion-item>
+          <ion-label>Designation</ion-label>
+      <ion-select [(ngModel)] = 'designation' (ionChange)='selecteddesignation(designation)'>
+        <ion-select-option value='employee'>Employee</ion-select-option>
+        <ion-select-option value='manager'>Manager</ion-select-option>
+      </ion-select>
+    </ion-item>
+      </div>
+      <div margin='100px'>
+       <ion-button color="dark" shape="round" expand="full" (click)="register()"> register </ion-button>
+      </div>
+    
+  </ion-content>
+  
+  
